@@ -17,6 +17,23 @@ return new class extends Migration
             $table->string('password', 50);
             $table->timestamps();
         });
+
+        DB::table("accounts")->insert([
+            [
+                'email' => 'jessther@gmail.com',
+                'password' => '123'
+            ],
+            [
+                'email' => 'tantan@gmail.com',
+                'password' => '123'
+            ],
+            [
+                'email' => 'rorons@gmail.com',
+                'password' => '123'
+            ],
+        ]);
+       
+    
     }
 
     /**

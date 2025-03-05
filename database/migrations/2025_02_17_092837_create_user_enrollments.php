@@ -22,6 +22,33 @@ return new class extends Migration
 
             $table->foreign("User_id")->references("id")->on("accounts")->onDelete("cascade")->onUpdate("cascade");
         });
+
+        DB::table("user_enrollments")->insert([
+            [
+                'User_id' => 1,
+                'Fullname' => 'Jessther jay salon',
+                'Phone_Number' => 123,
+                'Address' => 'opol',
+                'age' => 13
+
+            ],
+            [
+                'User_id' => 2,
+                'Fullname' => 'Tantan',
+                'Phone_Number' => 123,
+                'Address' => 'opol',
+                'age' => 13
+
+            ],
+            [
+                'User_id' => 3,
+                'Fullname' => 'Rorons',
+                'Phone_Number' => 123,
+                'Address' => 'opol',
+                'age' => 13
+
+            ],
+        ]);
     }
 
     

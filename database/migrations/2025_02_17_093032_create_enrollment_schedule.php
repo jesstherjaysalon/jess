@@ -21,6 +21,39 @@ return new class extends Migration
             $table->integer('Max_participants_per_day');
             $table->timestamps();
         });
+        DB::table("enrollment_schedule")->insert([
+            [
+                'School_Year' => '2024-2025',
+                'Semester' => 'First',
+                'Enroll_month' => 'June',
+                'Year_level' => '3',
+                'Status' => 'Open',
+                'Max_participants_per_day' => 13,
+
+
+            ],
+            [
+                'School_Year' => '2025-2026',
+                'Semester' => 'Second',
+                'Enroll_month' => 'June',
+                'Year_level' => '3',
+                'Status' => 'Closed',
+                'Max_participants_per_day' => 13,
+
+            ],
+            [
+                'School_Year' => '2026-2027',
+                'Semester' => 'Summer',
+                'Enroll_month' => 'June',
+                'Year_level' => '3',
+                'Status' => 'Pending',
+                'Max_participants_per_day' => 13,
+
+            ],
+        ]);
+
+
+
     }
 
     /**

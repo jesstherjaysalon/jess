@@ -25,6 +25,33 @@ return new class extends Migration
 
 
         });
+
+        DB::table("enrollment_appointments")->insert([
+            [
+                'enrollee_id' => 1,
+                'enrollment_id' => 1,
+                'exam_day' => 1,
+                'exam_time' => 'AM',
+                'Status' => 'booked'
+                
+            ],
+            [
+                'enrollee_id' => 2,
+                'enrollment_id' => 2,
+                'exam_day' => 1,
+                'exam_time' => 'PM',
+                'Status' => 'cancel'
+
+            ],
+            [
+                'enrollee_id' => 3,
+                'enrollment_id' => 3,
+                'exam_day' => 1,
+                'exam_time' => 'AM',
+                'Status' => 'pending'
+
+            ],
+        ]);
     }
 
     /**
