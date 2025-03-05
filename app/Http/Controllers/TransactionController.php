@@ -36,7 +36,7 @@ class TransactionController extends Controller
     public function getAppointmentsData(){
 
         $moderate= DB::table('Accounts as a')
-        ->select('u.Fullname As Fullname, ea.enrollee_id As Enrolle_id, ea.enrollment_id As Enrollment_id')
+        ->select('u.Fullname As Fullname', 'ea.enrollee_id As Enrolle_id', 'ea.enrollment_id As Enrollment_id')
        ->join('user_enrollments as u','a.id','u.User_id')
         ->join('enrollment_appointments as ea','a.id','ea.enrollee_id')
      ->join('enrollment_schedule as es','ea.id','es.id')
