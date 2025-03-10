@@ -15,3 +15,5 @@ Route::get('/v1/moderate',[TransactionController::class,'getAppointmentsData']);
 Route::get('/v1/challenging',[TransactionController::class,'getAppointmentsChallenging']);
 Route::get('/v1/difficult',[TransactionController::class,'getAppDifficult']);
 
+Route::get('/v1/dashboard',[TransactionController::class,'viewDashboard']);
+Route::get('/v1/appointment',[TransactionController::class,'viewEnrollmentApp']);

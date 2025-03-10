@@ -82,6 +82,20 @@ class TransactionController extends Controller
         return response()->json(['success' => true,'difficult'=> $difficult],200);
     }
 
+    public function viewDashboard(){
+        return view('pages.dashboard');
+    }
+
+    public function viewEnrollmentApp(){
+        $appointments = DB::table('User_enrollments as u')
+        ->join('Accounts as a', 'u.User_id', '=', 'a.id')
+        ->select('u.Fullname', 'u.Age', 'u.Phone_number', 'u.Address', 'a.Email')
+        ->get();
+
+    return view('appointment.enrollmentApp', compact('appointments'));
+    }
+
+    
 }
 
 
